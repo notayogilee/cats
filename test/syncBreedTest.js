@@ -10,7 +10,8 @@ describe('#breedDetails', () => {
     // console.log(breedDetails);
 
     assert.equal(expectedDesc, bombay);
-  }),
+    }),
+  
     it('returns breed details for the Balinese breed', () => {
       const expectedDesc = "Balinese are curious, outgoing, intelligent cats with excellent communication skills. They are known for their chatty personalities and are always eager to tell you their views on life, love, and what you’ve served them for dinner."
 
@@ -18,12 +19,11 @@ describe('#breedDetails', () => {
 
       assert.equal(expectedDesc, balinese);
     }),
-    it('returns no decription if there is no decription for the breed name provided', () => {
-      const expectedDesc = "";
+    it('returns appology decription if there is no decription for the breed name provided', () => {
+      const expectedDesc = "Sorry, I have no info on that breed of cat!";
 
-      const stray = breedDetails('Stray');
+      const Stray = breedDetails('Stray');
 
-      assert.equal(expectedDesc, stray);
-    }
+      assert.equal(expectedDesc, Stray);
+  });
 });
-
