@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const breedDetailsFromFile = function (breed, done) {
+const breedDetailsFromFile = function(breed, done) {
   console.log('breedDetailsFromFile: Calling readFile...');
 
   fs.readFile(`./data/${breed}.txt`, 'utf8', (error, data) => {
